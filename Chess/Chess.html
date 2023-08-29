@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chess</title>
+  <link rel="stylesheet" href="./Chess.css">
+</head>
+<body>
+    <h1>♞♚♛ Chess ♕♔♘</h1>
+    <div class="chess">
+      <div class="player">
+        <p id="pwhite">Player White</p>
+        <div class="wcells" id="wcells"></div>
+      </div>
+      <div class="board">
+      <!-- Generating div elements with consecutive IDs using a loop -->
+        <script>
+          for (var i = 0; i <= 63; i++) {
+          document.write('<div class="cell" id="cell' + i + '" onclick="handleCellClick(' + i + ')"></div>');
+          }
+        </script>
+      </div>
+      <div class="player">
+        <p id="pblack">Player Black</p>
+        <div class="bcells" id="bcells"></div>
+       </div>
+  </div>
+
+  <!-- PEON Promotion ---------------------->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <!-- List of selectable options -->
+      <select id="selectionList">
+        <option value="Q">Qeen</option>
+        <option value="H">Horse</option>
+        <option value="T">Tower</option>
+        <option value="A">Alfil</option>
+        <!-- Add more options as needed -->
+      </select>
+      <!-- Button to confirm selection -->
+      <button onclick="selectOption()">Select</button>
+    </div>
+  </div>
+  <!-- ------------------------------------>
+  
+  <!-- Button to show popup -->
+  <button onclick="showResultPopup()" id="checkMate">Check Mate</button>
+  <button onclick="resetBoard()" id="reset">Restart</button>
+  <script src="Chess.js"></script>
+</body>
+</html>

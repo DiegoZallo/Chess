@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+h1 {
+  font-family: Gothic;
+  font-size:300%;
+  color: antiquewhite;
+  
+} 
+
+  
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 40px);
+    grid-template-rows: repeat(8, 40px);
+
+    margin: 30px auto;
+    width: 320px;
+    background-color: white;
+    
+  }
+  
+.bcells, .wcells {
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    grid-template-rows: repeat(4, 40px);
+    gap: 2px;
+    margin: 30px auto;
+  }
+  
+.chess {
+    display:flex;
+    margin:  auto;
+    width: 700px;
+  }
+
+.cell, .wcell, .bcell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+
+    cursor: pointer;
+    font-size: 70%;
+    background-Size:  cover; 
+    background-Size:  50% auto;
+    background-Repeat:  no-repeat;
+    background-Position: center center;
+    transition: background-image 0.3s ease-in-out;
+  }
+  
+button {
+    margin-top: 20px;
+    font-size: 1em;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .player-text {
+    transition: font-size 1.0s ease-in-out, background-color 2.4s ease-in-out; 
+}
+
+/* Fade-out and fade-in animations */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.player {
+  margin-top: 50px;
+}
+
+/* The Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+body {
+  background-image: url(./Images/Chess.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#checkMate {
+  background-color: rgb(0, 0, 0, .2);
+  color: rgb(248, 40, 40);
+}
+
+#reset {
+  background-color: rgb(0, 0, 0, .2);
+  color:#008cff ;
+}
+
+#pwhite {
+  background-color: rgb(248, 248, 244, .5);
+  color:black;
+  
+}
+
+#pblack {
+  background-color: rgb(248, 248, 244, .5);
+  color:black;
+}
+
+
